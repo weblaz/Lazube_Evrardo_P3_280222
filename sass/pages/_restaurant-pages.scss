@@ -1,0 +1,134 @@
+.menu-pages {
+  header {
+    position: initial;
+    .return {
+      &:hover {
+        @include zoom;
+      }
+      &::before {
+        @include arrow;
+      }
+    }
+  }
+}
+.images__meal img {
+  width: 100%;
+  max-height: 55vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.menu-list {
+  background-color: $color-grey;
+  padding: 15px 15px 60px 15px;
+  border-radius: 15px 15px 0 0;
+  margin-top: -25px;
+  position: relative;
+  &__title {
+    display: flex;
+  }
+  .heart-place {
+    position: relative;
+    margin-left: auto;
+    padding-right: 20px;
+    @include heart-animation;
+  }
+  h1 {
+    position: relative;
+    @media #{$medium-screen} {
+      font-size: 33px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 25px;
+    margin: 0;
+    position: relative;
+    @include subtitle;
+  }
+}
+.menu {
+  h4 {
+    padding-bottom: 5px;
+  }
+  p {
+    font-size: 12px;
+  }
+  h4,
+  p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  @media #{$medium-screen} {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__flex {
+    @include appear-menu;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @media #{$medium-screen} {
+      width: 30%;
+      gap: 35px;
+    }
+  }
+  &-item {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    @include base-shadows;
+    &:hover {
+      cursor: pointer;
+    }
+    &__content {
+      padding: 15px 8px;
+      overflow: hidden;
+    }
+    &__price {
+      display: flex;
+      align-items: flex-end;
+      font-weight: 900;
+      margin: 10px 20px 10px auto;
+    }
+    &__check-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      border-radius: 0 15px 15px 0;
+      margin-right: -70px;
+      background-color: $color-tertiary;
+      transition: all 1s;
+
+      .fas {
+        color: white;
+        font-size: 26px;
+      }
+    }
+    &:hover {
+      .menu-item__check-box {
+        margin-right: 0;
+      }
+      .fas {
+        animation: spinner 700ms ease-in-out;
+      }
+    }
+  }
+}
+.order {
+  display: flex;
+  justify-content: center;
+  &__btn {
+    margin: 60px 0 20px;
+    @include btn-purple;
+    
+  }
+}

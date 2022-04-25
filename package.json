@@ -1,0 +1,23 @@
+{
+  "name": "lazube_evrardo_p3_280222",
+  "version": "1.0.0",
+  "description": "Mon project 3 Openclassrooms ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css",
+    "build": "postcss style.css -u autoprefixer -o ./build/style.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weblaz/Lazube_Evrardo_P3_280222.git"
+  },
+  "author": "Lazube Nino Evrardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weblaz/Lazube_Evrardo_P3_280222/issues"
+  },
+  "homepage": "https://github.com/weblaz/Lazube_Evrardo_P3_280222#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

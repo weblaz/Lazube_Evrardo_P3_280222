@@ -1,0 +1,55 @@
+.manual {
+  counter-reset: steps;
+
+  h2 {
+    margin: 30px;
+  }
+  ol {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 0;
+    @media #{$medium-screen} {
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
+
+  li {
+    &::before {
+      content: "" counter(steps);
+      counter-increment: steps;
+      background-color: $color-primary;
+      padding: 4px 8px;
+      border-radius: 50%;
+      position: relative;
+      right: 13px;
+      color: white;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    flex-grow: 1;
+    background-color: $color-grey;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 25px;
+    padding: 16px 0;
+    margin: 10px;
+    @include base-shadows;
+    &:hover {
+      @include zoom;
+      background-color: lighten($color-primary, 30%);
+      i::before {
+        color: $color-primary;
+      }
+    }
+  }
+  & i.fas {
+    color: darken($color-grey,50%);
+    margin: 10px 10px;
+    font-size: 20px;
+    padding: 4px;
+  }
+}
+

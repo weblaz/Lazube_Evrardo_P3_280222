@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  padding: 20px 0;
+  box-shadow: 0px 2px 2px 1px lightgray;
+  position: relative;
+  h1 {
+    display: flex;
+    margin: auto;
+  }
+}
+#logo {
+  width: 170px;
+  justify-content: center;
+  margin: auto;
+}
